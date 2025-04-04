@@ -1,4 +1,4 @@
-helados = []  # Lista para almacenar los helados
+helados = []  
 helado={}
 contadore_id = 1  
 
@@ -12,30 +12,31 @@ while True:
     
     opcion = input("Seleccione una opción: ")
     
-    if opcion == "1":  # Agregar un helado
+    if opcion == "1":  
         nombre = input("Ingrese el nombre del helado: ")
         descripcion = input("Ingrese la descripción del helado: ")
         cantidad = int(input("Ingresa la cantidad:"))
         precio = input("Ingrese el precio del helado: ")
         
         if precio.isdigit():
-            precio = float(precio)  # Error: variable mal escrita
+            precio = float(precio) 
             helado = {"id": contadore_id, "nombre": nombre, "descripcion": descripcion, "cantidad":cantidad ,"precio":precio}
-            helados.append(helado)  # Error: variable mal escrita
+            helados.append(helado)  
             contadore_id += 1
             print("Helado agregado correctamente.")
         else:
             print("Error: El precio debe ser un número.")
     
-    elif opcion == "2":  # Ver lista de helados
-        if len(helado) == 0:  # Error: variable incorrecta
+    elif opcion == "2":  
+        if len(helado) == 0:  
             print("No hay helados registrados.")
         else:
             print("Lista de Helados:\n")
             for helado in helados:
-                print(f"ID: {helado['id']}, Nombre: {helado['nombre']}, Descripción: {helado['descripcion']}, Cantidad:{helado['cantidad']} ,Precio: ${helado['precio']}")  # Error en claves del diccionario
+                print(f"ID: {helado['id']}, Nombre: {helado['nombre']}, Descripción: {helado['descripcion']}, Cantidad:{helado['cantidad']} ,Precio: ${helado['precio']}")
+               
     
-    elif opcion == "3":  # Modificar un helado
+    elif opcion == "3":  
         id_modificar = input("Ingrese el ID del helado a modificar: ")
         
         if id_modificar.isdigit():
